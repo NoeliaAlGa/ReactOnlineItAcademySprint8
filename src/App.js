@@ -1,11 +1,16 @@
+import Starships from './components/Starships'
+import Head from './components/Head';
+import NavStarWars from './components/NavStarWars';
+import {Body} from './styleComponents/styleApp.jsx'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <Body>
+      <Head />
+      <NavStarWars />
+      <Starships />
+    </Body>
   );
 }
 
