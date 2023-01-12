@@ -12,6 +12,7 @@ export const ListaNaves = styled.li `
     width: 400px;
     margin: auto;
     color: grey;
+    cursor: pointer;
 `
 
 export const NombreNave = styled.p `

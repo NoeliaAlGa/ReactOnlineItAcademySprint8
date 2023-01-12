@@ -1,12 +1,12 @@
 
-import {NavButtons, DivButtons} from '../styleComponents/styleApp';
+import {NavButtons, DivButtons, AStyle} from '../styleComponents/styleApp';
 
 
 const NavStarWars = () => {
     return (
         <DivButtons>
-            <NavButtons><a href="#">HOME</a></NavButtons>
-            <NavButtons><a href="#">STARSHIPS</a></NavButtons>
+            <NavButtons><AStyle href="#">HOME</AStyle></NavButtons>
+            <NavButtons><AStyle href="#">STARSHIPS</AStyle></NavButtons>
         </DivButtons>
     )
 }

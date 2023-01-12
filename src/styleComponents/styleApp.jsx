@@ -28,6 +28,14 @@ export const LogIn = styled.button `
 export const NavButtons = styled(LogIn)`
     font-size: 12px;
     margin: 10px;
+    &:hover {
+        border-bottom: solid blue;
+    }
+`
+
+export const AStyle = styled.a `
+    color: grey;
+    text-decoration: none;
 `
 
 export const DivButtons = styled.nav `
