@@ -6,8 +6,7 @@ import {StyleUl, ListaNaves, NombreNave, ModeloNave} from '../styleComponents/st
 
 function Starships() {
   const [starships, setStarships] = useState([]);
-  const [starshipAct, setStarshipAct] = useState("Hola");
-  const [isOpenModal, openModal, closeModal] = useModal(false);
+  const [isOpenModal, openModal, closeModal, starshipAct] = useModal(false);
 
   // promises
   useEffect(() => {
@@ -28,7 +27,7 @@ function Starships() {
         {starships.map(starship => {
           return (
             <>
-              <ListaNaves key={starship.name} onClick={openModal} onChange>
+              <ListaNaves key={starship.name} onClick={() => openModal(starship)}>
                 <NombreNave>{starship.name}</NombreNave>
                 <ModeloNave>{starship.model}</ModeloNave>
               </ListaNaves>
