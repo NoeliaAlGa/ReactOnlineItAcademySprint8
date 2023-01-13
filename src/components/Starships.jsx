@@ -19,8 +19,6 @@ function Starships() {
       });
   }, []);
 
-  console.log(starships);
-
   return (
     <div>
       <StyleUl>

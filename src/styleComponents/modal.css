@@ -31,3 +31,21 @@ align-items: center;
     top: 1rem;
     right: 1rem;
 }
+
+.imgStarshipPopUp {
+    height: 250px;
+}
+
+.divTextPrincipal {
+    font-size: 12px;
+}
+
+.divText {
+    display:flex;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.textPopUp {
+    margin-right: 2rem;
+}
