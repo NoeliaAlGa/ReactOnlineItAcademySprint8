@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { fetchStarships } from '../hooks/FetchStarships'
-import { useModal } from '../hooks/useModal';
-import Modal from './Modal';
-import {StyleUl, ListaNaves, NombreNave, ModeloNave, BotonPages} from '../styleComponents/styleStarships'
+import { fetchStarships } from '../../hooks/FetchStarships'
+import { useModal } from '../../hooks/useModal';
+import Modal from '../Modal';
+import NavStarWars from '../navigation/NavStarWars';
+import {StyleUl, ListaNaves, NombreNave, ModeloNave, BotonPages} from '../../styleComponents/styleStarships'
 
 function Starships() {
   const [urlActualPage, setUrlActualPage] = useState('https://swapi.dev/api/starships/?page=1')
@@ -21,6 +22,7 @@ function Starships() {
 
   return (
     <div>
+      <NavStarWars />
       <StyleUl>
         {starships.map(starship => {
           return (

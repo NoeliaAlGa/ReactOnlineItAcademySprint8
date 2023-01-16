@@ -1,16 +1,13 @@
-import Starships from './components/Starships'
 import Head from './components/Head';
-import NavStarWars from './components/NavStarWars';
+import Routes from './components/routes'
 import {Body} from './styleComponents/styleApp.jsx'
 
-
-function App() {
+const App = () => {
   return (
-    <Body>
-      <Head />
-      <NavStarWars />
-      <Starships />
-    </Body>
+      <Body>
+        <Head />
+        <Routes />
+      </Body>
   );
 }
 
