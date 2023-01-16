@@ -13,6 +13,10 @@ export const ListaNaves = styled.li `
     margin: auto;
     color: grey;
     cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 10px grey;
+        color: white;
+    }
 `
 
 export const NombreNave = styled.p `
@@ -25,4 +29,17 @@ export const ModeloNave = styled.p `
     font-size: 12px;
     margin: 0;
     padding-bottom: 8px; 
+`
+
+export const BotonPages = styled.button `
+    background-color: black;
+    border-bottom: solid grey;
+    color: grey;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 1rem;
+    &:hover {
+        border-bottom: solid blue;
+        color: white;
+    }
 `

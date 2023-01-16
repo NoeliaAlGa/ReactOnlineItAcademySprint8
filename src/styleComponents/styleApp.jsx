@@ -24,6 +24,10 @@ export const LogIn = styled.button `
     background-color: black;
     color: grey;
     cursor: pointer;
+    &:hover {
+        border-bottom: solid blue;
+        color: white;
+    }
 `
 export const NavButtons = styled(LogIn)`
     font-size: 12px;
@@ -36,6 +40,9 @@ export const NavButtons = styled(LogIn)`
 export const AStyle = styled.a `
     color: grey;
     text-decoration: none;
+    &:hover {
+        color: white;
+    }
 `
 
 export const DivButtons = styled.nav `

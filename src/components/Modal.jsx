@@ -53,7 +53,6 @@ const Modal = ({isOpen, closeModal, nave}) => {
               <div className='textPopUp'>
                 <p><b>FILMS:</b></p>
               </div>
-              
             </div>
         </div>
     </article>
