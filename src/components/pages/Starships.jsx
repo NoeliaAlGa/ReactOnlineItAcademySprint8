@@ -3,6 +3,7 @@ import { fetchStarships } from '../../hooks/FetchStarships'
 import { useModal } from '../../hooks/useModal';
 import Modal from '../Modal';
 import NavStarWars from '../navigation/NavStarWars';
+import Head from '../../components/Head';
 import {StyleUl, ListaNaves, NombreNave, ModeloNave, BotonPages} from '../../styleComponents/styleStarships'
 
 function Starships() {
@@ -22,11 +23,8 @@ function Starships() {
 
   return (
     <div>
+      <Head />
       <NavStarWars />
-      <div>
-        <BotonPages onClick={() => setUrlActualPage(pageResponse.previous)}>Previous page </BotonPages>
-        <BotonPages onClick={() => setUrlActualPage(pageResponse.next)}>Next page</BotonPages>
-      </div>
       <StyleUl>
         {starships.map(starship => {
           return (
@@ -41,6 +39,10 @@ function Starships() {
         <Modal isOpen={isOpenModal} closeModal={closeModal} nave={starshipAct}>
         </Modal>
       </StyleUl>
+      <div>
+        <BotonPages onClick={() => setUrlActualPage(pageResponse.previous)}>Previous page </BotonPages>
+        <BotonPages onClick={() => setUrlActualPage(pageResponse.next)}>Next page</BotonPages>
+      </div>
     </div>
   );
 }

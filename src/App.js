@@ -1,11 +1,11 @@
-import Head from './components/Head';
+// import Head from './components/Head';
 import Routes from './components/routes'
 import {Body} from './styleComponents/styleApp.jsx'
 
 const App = () => {
   return (
       <Body>
-        <Head />
+        {/* <Head /> */}
         <Routes />
       </Body>
   );

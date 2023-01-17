@@ -1,10 +1,9 @@
 import React from 'react';
 import {NavButtons, DivButtons} from '../../styleComponents/styleApp';
 import { Link } from "react-router-dom";
-import { fetchStarships } from '../../hooks/FetchStarships';
+
 
 const NavStarWars = () => {
-    const urlActualPage = 'https://swapi.dev/api/starships/?page=1';
 
     return (
         <DivButtons>
