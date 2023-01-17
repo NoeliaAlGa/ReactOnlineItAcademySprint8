@@ -23,6 +23,10 @@ function Starships() {
   return (
     <div>
       <NavStarWars />
+      <div>
+        <BotonPages onClick={() => setUrlActualPage(pageResponse.previous)}>Previous page </BotonPages>
+        <BotonPages onClick={() => setUrlActualPage(pageResponse.next)}>Next page</BotonPages>
+      </div>
       <StyleUl>
         {starships.map(starship => {
           return (
@@ -37,10 +41,6 @@ function Starships() {
         <Modal isOpen={isOpenModal} closeModal={closeModal} nave={starshipAct}>
         </Modal>
       </StyleUl>
-      <div>
-        <BotonPages onClick={() => setUrlActualPage(pageResponse.previous)}>Previous page </BotonPages>
-        <BotonPages onClick={() => setUrlActualPage(pageResponse.next)}>Next page</BotonPages>
-      </div>
     </div>
   );
 }
