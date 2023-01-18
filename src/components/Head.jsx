@@ -7,9 +7,9 @@ const Head = () => {
         <>
         <LogoSW src={LogoStarWars} alt='StarWars'></LogoSW>
         <DivLogIn>
-          <Link to="/LogInUser"><LogIn>LOG IN</LogIn></Link>
+          <Link to="/LogInUser"><LogIn type="submit" >LOG IN</LogIn></Link>
           ||
-          <Link to="/SignUp"><LogIn>SIGN UP</LogIn></Link>
+          <Link to="/SignUp"><LogIn type="submit">SIGN UP</LogIn></Link>
         </DivLogIn>
       </>
     );

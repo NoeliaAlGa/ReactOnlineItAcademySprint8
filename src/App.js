@@ -1,13 +1,11 @@
-// import Head from './components/Head';
 import Routes from './components/routes'
-import {Body} from './styleComponents/styleApp.jsx'
+import {BodyStyle} from './styleComponents/styleApp.jsx'
 
 const App = () => {
   return (
-      <Body>
-        {/* <Head /> */}
+      <BodyStyle>
         <Routes />
-      </Body>
+      </BodyStyle>
   );
 }
 

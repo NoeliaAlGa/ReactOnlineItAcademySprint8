@@ -1,7 +1,7 @@
 
 import styled from "styled-components";
 
-export const Body = styled.body `
+export const BodyStyle = styled.div `
     background-color: black;
     font-family: DINNext, Matterhorn, Helvetica, sans-serif;
     color: white;
@@ -20,6 +20,7 @@ export const LogoSW = styled.img `
 
 export const DivLogIn = styled.label `
     float: right;
+    margin-top: 10px;
 `
 
 export const LogIn = styled.button `
@@ -28,15 +29,19 @@ export const LogIn = styled.button `
     background-color: black;
     color: grey;
     cursor: pointer;
+    margin: 0 10px 0 10px;
     &:hover {
         border-bottom: solid blue;
         color: white;
     }
 `
-export const NavButtons = styled(LogIn)`
+export const NavButtons = styled.button`
     font-size: 12px;
     margin: 10px;
-    
+    font-weight: bold;
+    background-color: black;
+    color: grey;
+    cursor: pointer;
     &:hover {
         border-bottom: solid blue;
         color: white;
