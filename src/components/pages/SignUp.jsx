@@ -1,7 +1,9 @@
 import React, { useState} from "react";
 import Head from '../../components/Head';
 import NavStarWars from "../navigation/NavStarWars";
-import GuardarSignUp from "../GuardarSignUp"
+import GuardarSignUp from "../GuardarSignUp";
+import imgSignUp from "../../img/SignUp.jpg";
+import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp } from "../../styleComponents/styleLogInSignUp";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -25,22 +27,25 @@ const handleInput = (e, nombreInput) => {
     <>
     <Head />
     <NavStarWars />
-    <form>
-      <h2>SIGN UP</h2>
-      <div>
-        <label>Name </label>
-        <input type="text" placeholder="Enter your name" onChange={(e) => handleInput(e, "nombreUsuario")}/>
-      </div>
-      <div>
-        <label>Email address </label>
-        <input type="email" placeholder="Enter email" onChange={(e) => handleInput(e, "emailUsuario")}/>
-      </div>
-      <div>
-        <label>Password </label>
-        <input type="password" placeholder="Password" onChange={(e) => handleInput(e, "contraseñaUsuario")}/>
-      </div>
-      <Link to=""><button type="submit" onClick={() => GuardarSignUp(nombreUsuario, emailUsuario, contraseñaUsuario)}>Submit </button></Link>
-    </form>
+    <DivLogInSignUpImg>
+      <ImgLogInSignUp src={imgSignUp}  alt="kylo ren and stormtroopers"></ImgLogInSignUp>
+      <StyleForm>
+        <H2LogInSignUp>SIGN UP</H2LogInSignUp>
+        <DivLogInSignUp>
+          <LabelsLogInSignUp>Name </LabelsLogInSignUp>
+          <input type="text" placeholder="Enter your name" onChange={(e) => handleInput(e, "nombreUsuario")}/>
+        </DivLogInSignUp>
+        <DivLogInSignUp>
+          <LabelsLogInSignUp>Email address </LabelsLogInSignUp>
+          <input type="email" placeholder="Enter email" onChange={(e) => handleInput(e, "emailUsuario")}/>
+        </DivLogInSignUp>
+        <DivLogInSignUp>
+          <LabelsLogInSignUp>Password </LabelsLogInSignUp>
+          <input type="password" placeholder="Password" onChange={(e) => handleInput(e, "contraseñaUsuario")}/>
+        </DivLogInSignUp>
+        <Link to=""><BotonLogInSignUp type="submit" onClick={() => GuardarSignUp(nombreUsuario, emailUsuario, contraseñaUsuario)}>SIGN UP</BotonLogInSignUp></Link>
+      </StyleForm>
+    </DivLogInSignUpImg>
     </>
   );
 };

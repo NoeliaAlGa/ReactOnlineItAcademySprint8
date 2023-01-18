@@ -23,7 +23,7 @@ const Modal = ({isOpen, closeModal, nave}) => {
   return (
     <article className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
         <div className="modal-container">
-            <button className="modal-close" onClick={closeModal}>X</button>
+            <button className="modal-close buttonCloseModal" onClick={closeModal}>X</button>
             <h1>{nave.name}</h1>
             <img className="imgStarshipPopUp" src={imgStarshipAct}  alt={nave.name}></img>
             <div className='divTextPrincipal'>
