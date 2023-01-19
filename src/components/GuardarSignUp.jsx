@@ -1,5 +1,6 @@
 
 import BuscarUsuario from "./BuscarUsuario";
+import GuardarLogIn from "./GuardarLogIn";
 
 function GuardarSignUp(nombreUsuario, mailUsuario, contraseñaUsuario) {
     const usuarios =
@@ -13,6 +14,9 @@ function GuardarSignUp(nombreUsuario, mailUsuario, contraseñaUsuario) {
         alert("Already registered user");
       }
       else {
+          localStorage.removeItem("LogedUser");
+          GuardarLogIn(nombreUsuario, contraseñaUsuario);
+        
         const usuario = {
             nombre: nombreUsuario,
             mail: mailUsuario,

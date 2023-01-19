@@ -17,8 +17,21 @@ export const H2LogInSignUp = styled.h2 `
 `
 
 export const StyleForm = styled.form `
-    padding-top:2rem;
+    padding-top:10px;
     text-align: left;
+`
+export const TextInformation = styled.p `
+    font-size: 10px;
+    color: grey;
+    margin-top: 1rem;
+    text-align: right;
+`
+export const InformationRegistered = styled(TextInformation) `
+    font-size: 12px;
+    text-align: left;
+    color: white;
+    margin-left: 10px;
+    border-bottom: solid blue;
 `
 
 export const DivLogInSignUp = styled.div `
@@ -39,7 +52,7 @@ export const BotonLogInSignUp = styled.button `
     border-bottom: solid grey;
     color: grey;
     cursor: pointer;
-    margin-top:1rem;
+    margin-left: 10px;
     padding: 5px;
     &:hover {
         border-bottom: solid blue;

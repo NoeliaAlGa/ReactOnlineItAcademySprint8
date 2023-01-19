@@ -3,14 +3,18 @@ import {ImgWallpaper, DivImgButton, TextEncimaImg} from '../../styleComponents/s
 import ImgGuide from '../../img/fondo home.jpg';
 import Head from '../../components/Head';
 
-const Home = () => 
-<div>
-    <>
+const Home = () => {
+    const toLogedUser =
+    window.localStorage.getItem("LogedUser") === null
+      ? <Link to="/LogInUser"><TextEncimaImg>Starships Guide</TextEncimaImg></Link>
+      : <Link to="/Starships"><TextEncimaImg>Starships Guide</TextEncimaImg></Link>
+
+return (<div>
         <Head />
         <DivImgButton>
             <ImgWallpaper src={ImgGuide} alt="Guia Starships Star Wars"></ImgWallpaper>
-            <Link to="/Starships"><TextEncimaImg>Starships Guide</TextEncimaImg></Link>
+            <>{toLogedUser}</>
         </DivImgButton>
-    </>
-</div>
+    </div>)
+}
 export default Home;

@@ -61,3 +61,8 @@ export const DivButtons = styled.nav `
     border-bottom: solid grey;
     margin-top: 1rem;
 `
+export const TextRegUser = styled.p `
+    margin: 0 1rem 0 0;
+    text-align: right;
+    font-size: 12px;
+`   

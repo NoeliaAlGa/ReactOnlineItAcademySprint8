@@ -3,7 +3,7 @@ import Head from '../../components/Head';
 import NavStarWars from "../navigation/NavStarWars";
 import BuscarUsuarios from "../BuscarUsuarios";
 import imgLogIn from "../../img/logIn.jpg"
-import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp } from "../../styleComponents/styleLogInSignUp";
+import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp, TextInformation, InformationRegistered } from "../../styleComponents/styleLogInSignUp";
 import { Link } from "react-router-dom";
 
 const LogInUser = () => {
@@ -30,13 +30,18 @@ const LogInUser = () => {
         <H2LogInSignUp>LOG IN</H2LogInSignUp>
         <DivLogInSignUp>
           <LabelsLogInSignUp>Name</LabelsLogInSignUp>
-          <input type="text" placeholder="Enter your name" onChange={(e) => handleInput(e, "nombreUsuario")}/>
+          <input type="text" placeholder="Enter your name" onChange={(e) => handleInput(e, "nombreUsuario")} required/>
         </DivLogInSignUp>
         <DivLogInSignUp>
           <LabelsLogInSignUp>Password</LabelsLogInSignUp>
-          <input type="password" placeholder="Password" onChange={(e) => handleInput(e, "contraseñaUsuario")}/>
+          <input type="password" placeholder="Password" onChange={(e) => handleInput(e, "contraseñaUsuario")} required/>
         </DivLogInSignUp>
-        <Link to=""><BotonLogInSignUp type="submit" onClick={() => BuscarUsuarios(nombreUsuario, contraseñaUsuario)}>LOG IN</BotonLogInSignUp></Link>
+        <TextInformation>* Being registered is mandatory to see the information of the starships.</TextInformation>
+        <Link to="/Starships"><BotonLogInSignUp type="submit" onClick={() => BuscarUsuarios(nombreUsuario, contraseñaUsuario)}>LOG IN</BotonLogInSignUp></Link>
+        <div>
+          <InformationRegistered>You not registered?</InformationRegistered>
+          <Link to="/SignUp"><BotonLogInSignUp type="submit">SIGN UP</BotonLogInSignUp></Link>
+        </div>
       </StyleForm>
     </DivLogInSignUpImg>
     </>
