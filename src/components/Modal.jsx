@@ -1,25 +1,10 @@
 import '../styleComponents/modal.css'
-import React, { useState, useEffect } from 'react';
-import { fetchImgStarships } from '../hooks/FetchImgStarships'
-import ExtraerNumImatge from '../hooks/ExtraerNumImatge';
-
+import React from 'react';
+import PilotsCart from './PilotsCart';
+import UseEffectModal from '../hooks/UseEffectModal';
 const Modal = ({isOpen, closeModal, nave}) => {
+  const imgStarshipAct = UseEffectModal(nave);
 
-  const [imgStarshipAct, setImgStarshipAct] = useState([]);
-  const urlImage = nave.url;
-  const numImage = ExtraerNumImatge(urlImage);
-
-  useEffect(() => {
-    fetchImgStarships(numImage)
-      .then(response => {
-        setImgStarshipAct(response);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  });
-
-  
   return (
     <article className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
         <div className="modal-container">
@@ -47,9 +32,7 @@ const Modal = ({isOpen, closeModal, nave}) => {
               </div>
             </div>
             <div className='divText'>
-              <div className='textPopUp'>
-                <p><b>PILOTS:</b></p>
-              </div>
+              <PilotsCart pilotsStarship={nave.pilots}/>
               <div className='textPopUp'>
                 <p><b>FILMS:</b></p>
               </div>

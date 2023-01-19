@@ -6,8 +6,12 @@ import { Link } from "react-router-dom";
 const Head = () => {
   const actualLogIn = JSON.parse(window.localStorage.getItem("LogedUser"));
   let user;
+  let logOut;
   if(actualLogIn !==null) {
     user = `👽 User: ${actualLogIn[0].nombre}`;
+    logOut = <LogIn onClick={()=> {
+      localStorage.removeItem("LogedUser");
+    } }>LOG OUT</LogIn>
   }
   
     return (
@@ -18,7 +22,7 @@ const Head = () => {
           ||
           <Link to="/SignUp"><LogIn>SIGN UP</LogIn></Link>
         </DivLogIn>
-        <TextRegUser>{user}</TextRegUser>
+        <TextRegUser>{user} {logOut}</TextRegUser>
       </>
     );
   }
