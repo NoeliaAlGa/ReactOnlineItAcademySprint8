@@ -1,5 +1,5 @@
 import UseEffectPilotsFilms from '../hooks/UseEffectPilotsFilms';
-import {StyledUl, StyleDiv, StyledLi} from '../styleComponents/styleCart';
+import {StyledUl, StyleDiv, BotonCart} from '../styleComponents/styleCart';
 
 const FilmsCart = ({filmStarship}) => {
     const infoFilms= [];
@@ -20,7 +20,8 @@ const FilmsCart = ({filmStarship}) => {
         <div>
           <StyledUl>{infoFilms.map(film => {
             return (
-              <StyledLi key={film.id}>{film.title}</StyledLi>
+              <li key={film.id}><BotonCart onClick={() => alert(`Film: ${film.title} \n Summary film: \n ${film.opening_crawl}`)
+            } >{film.title}</BotonCart></li>
             )
           })}
           </StyledUl>

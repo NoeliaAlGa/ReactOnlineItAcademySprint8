@@ -11,18 +11,6 @@ export const StyledUl = styled.ul `
     margin-left: -50px;
 `
 
-export const StyledLi = styled.li `
-    color: grey;
-    margin: 5px;
-    padding: 5px;
-    border-bottom: solid grey;
-    font-size: 12px;
-    &:hover {
-        border-bottom: solid blue;
-        color: white;
-    }
-`
-
 export const BotonCart = styled.button `
     background-color: black;
     border-bottom: solid grey;
