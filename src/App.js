@@ -1,10 +1,10 @@
-import Routes from './components/routes'
+import Router from './components/routes'
 import {BodyStyle} from './styleComponents/styleApp.jsx'
 
 const App = () => {
   return (
       <BodyStyle>
-        <Routes />
+        <Router />
       </BodyStyle>
   );
 }

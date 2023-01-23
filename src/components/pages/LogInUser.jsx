@@ -7,7 +7,7 @@ import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, Div
 import { Link } from "react-router-dom";
 
 const LogInUser = () => {
-
+debugger;
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [contraseñaUsuario, setContraseñaUsuario] = useState("");
 
@@ -37,7 +37,9 @@ const LogInUser = () => {
           <input type="password" placeholder="Password" onChange={(e) => handleInput(e, "contraseñaUsuario")} required/>
         </DivLogInSignUp>
         <TextInformation>* Being registered is mandatory to see the information of the starships.</TextInformation>
-        <Link to="/Starships"><BotonLogInSignUp type="submit" onClick={() => BuscarUsuarios(nombreUsuario, contraseñaUsuario)}>LOG IN</BotonLogInSignUp></Link>
+        <Link to="/Starships"><BotonLogInSignUp type="submit" onClick={() =>
+          BuscarUsuarios(nombreUsuario, contraseñaUsuario)
+        }>LOG IN</BotonLogInSignUp></Link>
         <div>
           <InformationRegistered>You not registered?</InformationRegistered>
           <Link to="/SignUp"><BotonLogInSignUp type="submit">SIGN UP</BotonLogInSignUp></Link>

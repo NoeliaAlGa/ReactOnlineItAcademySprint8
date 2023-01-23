@@ -1,29 +1,32 @@
-import UseEffectPilots from '../hooks/UseEffectPilots';
-
+import UseEffectPilots from '../hooks/UseEffectPilotsFilms';
+import {BotonCart, StyledUl, StyleDiv} from '../styleComponents/styleCart'
 
 const PilotsCart = ({pilotsStarship}) => {
-    debugger;
-    console.log(pilotsStarship);
     const infoPilots= [];
     let urlPilotActual ="";
+  
 
     if (pilotsStarship !== undefined) {
         for(let i= 0; i<pilotsStarship.length; i++ ) {
             urlPilotActual = pilotsStarship[i];
-            console.log(urlPilotActual)
             infoPilots.push(UseEffectPilots(urlPilotActual));
-            console.log("Info Pilot: ", infoPilots);
         }
     }
-
-      
-
+    
   return (
-    <div>
+    <StyleDiv>
         <p><b>PILOTS:</b></p>
         <div>
+          <StyledUl>{infoPilots.map(pilot => {
+            return (
+              <li key={pilot.name}><BotonCart onClick={() => alert(`Pilot: ${pilot.name} \n Birth year: ${pilot.birth_year} \n Gender: ${pilot.gender} \n Height: ${pilot.height} \n Skin Color: ${pilot.skin_color} \n Eye Color: ${pilot.eye_color}`)
+              } >{pilot.name}</BotonCart>
+              </li>
+            )
+          })}
+          </StyledUl>
         </div>
-    </div>
+    </StyleDiv>
   )
 }
 

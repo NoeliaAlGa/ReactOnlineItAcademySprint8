@@ -9,9 +9,9 @@ const Head = () => {
   let logOut;
   if(actualLogIn !==null) {
     user = `👽 User: ${actualLogIn[0].nombre}`;
-    logOut = <LogIn onClick={()=> {
+    logOut = <Link to="/LogInUser"><LogIn onClick={()=> {
       localStorage.removeItem("LogedUser");
-    } }>LOG OUT</LogIn>
+    } }>LOG OUT</LogIn></Link>
   }
   
     return (
