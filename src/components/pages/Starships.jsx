@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { fetchStarships } from './hooks/FetchStarships'
-import { useModal } from '../../hooks/useModal';
-import Modal from '../Modal';
+import { useModal } from '../../components/modalStarships/useModal';
+import Modal from '../modalStarships/Modal';
 import NavStarWars from '../navigation/NavStarWars';
-import Head from '../../components/Head';
-import {StyleUl, ListaNaves, NombreNave, ModeloNave, BotonPages} from '../../styleComponents/styleStarships'
+import Head from '../navigation/Head';
+import {StyleUl, ListaNaves, NombreNave, ModeloNave, BotonPages} from '../pages/style/styleStarships'
 
 function Starships() {
   const [urlActualPage, setUrlActualPage] = useState('https://swapi.dev/api/starships/?page=1')

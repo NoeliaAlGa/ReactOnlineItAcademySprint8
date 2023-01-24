@@ -1,5 +1,5 @@
-import UseEffectPilots from '../hooks/UseEffectPilotsFilms';
-import {BotonCart, StyledUl, StyleDiv} from '../styleComponents/styleCart'
+import UseEffectPilots from '../Carts/hook/UseEffectPilotsFilms';
+import {BotonCart, StyledUl, StyleDiv} from '../Carts/style/styleCart'
 
 const PilotsCart = ({pilotsStarship}) => {
     const infoPilots= [];

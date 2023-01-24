@@ -1,8 +1,8 @@
-import '../styleComponents/modal.css'
+import '../modalStarships/style/modal.css'
 import React from 'react';
-import PilotsCart from '../PilotsCart';
+import PilotsCart from '../Carts/PilotsCart';
 import FilmsCart from '../Carts/FilmsCart';
-import UseEffectModal from '../../hooks/UseEffectModal';
+import UseEffectModal from '../modalStarships/hook/UseEffectModal';
 
 const Modal = ({isOpen, closeModal, nave}) => {
   const imgStarshipAct = UseEffectModal(nave);

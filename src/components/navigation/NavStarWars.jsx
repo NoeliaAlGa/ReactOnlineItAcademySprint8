@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavButtons, DivButtons} from '../../styleComponents/styleApp';
+import {NavButtons, DivButtons} from '../../components/navigation/style/styleApp';
 import { Link } from "react-router-dom";
 
 

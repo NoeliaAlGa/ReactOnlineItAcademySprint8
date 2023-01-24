@@ -1,5 +1,5 @@
-import Router from './components/routes'
-import {BodyStyle} from './styleComponents/styleApp.jsx'
+import Router from './components/Routes/routes';
+import {BodyStyle} from './components/navigation/style/styleApp';
 
 const App = () => {
   return (
