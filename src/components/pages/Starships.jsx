@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchStarships } from '../../hooks/FetchStarships'
+import { fetchStarships } from './hooks/FetchStarships'
 import { useModal } from '../../hooks/useModal';
 import Modal from '../Modal';
 import NavStarWars from '../navigation/NavStarWars';
