@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import {ImgWallpaper, DivImgButton, TextEncimaImg} from '../../styleComponents/styleHome';
+import {ImgWallpaper, DivImgButton, TextEncimaImg} from '../../components/pages/style/styleHome'
 import ImgGuide from '../../img/fondo home.jpg';
-import Head from '../../components/Head';
+import Head from '../../components/navigation/Head';
 
 const Home = () => {
     const toLogedUser =

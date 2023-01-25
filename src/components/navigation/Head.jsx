@@ -1,6 +1,6 @@
 
-import LogoStarWars from '../img/sw_logo_stacked_2x-52b4f6d33087_7ef430af.webp'
-import { LogoSW, LogIn, DivLogIn, TextRegUser} from '../styleComponents/styleApp.jsx'
+import LogoStarWars from '../../img/sw_logo_stacked_2x-52b4f6d33087_7ef430af.webp'
+import { LogoSW, LogIn, DivLogIn, TextRegUser} from '../navigation/style/styleApp'
 import { Link } from "react-router-dom";
 
 const Head = () => {
@@ -9,9 +9,9 @@ const Head = () => {
   let logOut;
   if(actualLogIn !==null) {
     user = `👽 User: ${actualLogIn[0].nombre}`;
-    logOut = <LogIn onClick={()=> {
+    logOut = <Link to="/LogInUser"><LogIn onClick={()=> {
       localStorage.removeItem("LogedUser");
-    } }>LOG OUT</LogIn>
+    } }>LOG OUT</LogIn></Link>
   }
   
     return (

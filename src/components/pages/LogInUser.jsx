@@ -1,13 +1,13 @@
 import React, {useState} from "react";
-import Head from '../../components/Head';
+import Head from '../../components/navigation/Head';
 import NavStarWars from "../navigation/NavStarWars";
-import BuscarUsuarios from "../BuscarUsuarios";
+import BuscarUsuarios from "../pages/hooks/BuscarUsuario";
 import imgLogIn from "../../img/logIn.jpg"
-import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp, TextInformation, InformationRegistered } from "../../styleComponents/styleLogInSignUp";
+import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp, TextInformation, InformationRegistered } from "../../components/pages/style/styleLogInSignUp";
 import { Link } from "react-router-dom";
 
 const LogInUser = () => {
-
+debugger;
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [contraseñaUsuario, setContraseñaUsuario] = useState("");
 
@@ -19,6 +19,7 @@ const LogInUser = () => {
       setContraseñaUsuario(e.target.value);
     }
   }
+
 
   return (
     <>
@@ -37,7 +38,9 @@ const LogInUser = () => {
           <input type="password" placeholder="Password" onChange={(e) => handleInput(e, "contraseñaUsuario")} required/>
         </DivLogInSignUp>
         <TextInformation>* Being registered is mandatory to see the information of the starships.</TextInformation>
-        <Link to="/Starships"><BotonLogInSignUp type="submit" onClick={() => BuscarUsuarios(nombreUsuario, contraseñaUsuario)}>LOG IN</BotonLogInSignUp></Link>
+        <Link to="/Starships"><BotonLogInSignUp type="submit" onClick={() =>
+          BuscarUsuarios(nombreUsuario, contraseñaUsuario)
+        }>LOG IN</BotonLogInSignUp></Link>
         <div>
           <InformationRegistered>You not registered?</InformationRegistered>
           <Link to="/SignUp"><BotonLogInSignUp type="submit">SIGN UP</BotonLogInSignUp></Link>

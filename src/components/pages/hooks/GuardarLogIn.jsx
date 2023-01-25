@@ -15,7 +15,6 @@ function GuardarLogIn(nombreUsuario, contraseñaUsuario) {
           logedUser.push(usuario);
           window.localStorage.setItem("LogedUser", JSON.stringify(logedUser));
         
-      
 }
 
 export default GuardarLogIn

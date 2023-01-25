@@ -1,9 +1,9 @@
 import React, { useState} from "react";
-import Head from '../../components/Head';
+import Head from '../../components/navigation/Head';
 import NavStarWars from "../navigation/NavStarWars";
-import GuardarSignUp from "../GuardarSignUp";
+import GuardarSignUp from "../pages/hooks/GuardarSignUp";
 import imgSignUp from "../../img/SignUp.jpg";
-import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp, TextInformation, InformationRegistered } from "../../styleComponents/styleLogInSignUp";
+import {DivLogInSignUp, BotonLogInSignUp, LabelsLogInSignUp, ImgLogInSignUp, DivLogInSignUpImg, StyleForm, H2LogInSignUp, TextInformation, InformationRegistered } from "../../components/pages/style/styleLogInSignUp";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {

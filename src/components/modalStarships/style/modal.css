@@ -17,8 +17,8 @@ align-items: center;
 
 .modal-container {
     position: relative;
-    padding: 1rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)) ,url("../img/fondo\ naves.jpg");
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)) ,url("../../../img/fondo\ naves.jpg");
     min-width: 600px;
     max-width: 100vh;
     min-height: auto;
@@ -47,9 +47,6 @@ align-items: center;
     justify-content: center;
 }
 
-.textPopUp {
-    margin-right: 2rem;
-}
 
 .buttonCloseModal {
     background-color: black;

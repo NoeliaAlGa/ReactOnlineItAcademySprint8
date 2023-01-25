@@ -1,12 +1,14 @@
-import '../styleComponents/modal.css'
+import '../modalStarships/style/modal.css'
 import React from 'react';
-import PilotsCart from './PilotsCart';
-import UseEffectModal from '../hooks/UseEffectModal';
+import PilotsCart from '../Carts/PilotsCart';
+import FilmsCart from '../Carts/FilmsCart';
+import UseEffectModal from '../modalStarships/hook/UseEffectModal';
+
 const Modal = ({isOpen, closeModal, nave}) => {
   const imgStarshipAct = UseEffectModal(nave);
-
+    console.log(nave);
   return (
-    <article className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
+    <article className={`modal ${isOpen && "is-open"}`}>
         <div className="modal-container">
             <button className="modal-close buttonCloseModal" onClick={closeModal}>X</button>
             <h1>{nave.name}</h1>
@@ -33,9 +35,7 @@ const Modal = ({isOpen, closeModal, nave}) => {
             </div>
             <div className='divText'>
               <PilotsCart pilotsStarship={nave.pilots}/>
-              <div className='textPopUp'>
-                <p><b>FILMS:</b></p>
-              </div>
+              <FilmsCart filmStarship={nave.films}/>
             </div>
         </div>
     </article>

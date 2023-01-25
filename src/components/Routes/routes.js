@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Starships from './pages/Starships'
-import LogInUser from './pages/LogInUser';
-import SignUp from './pages/SignUp';
+import Home from '../pages/Home'
+import Starships from '../pages/Starships'
+import LogInUser from '../pages/LogInUser';
+import SignUp from '../pages/SignUp';
 
-export default () => (
+const Router = () => (
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home />}/>
@@ -14,3 +14,4 @@ export default () => (
         </Routes>
     </BrowserRouter>
 );
+export default Router;
