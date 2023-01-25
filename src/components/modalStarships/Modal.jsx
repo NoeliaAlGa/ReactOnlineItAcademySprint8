@@ -6,7 +6,7 @@ import UseEffectModal from '../modalStarships/hook/UseEffectModal';
 
 const Modal = ({isOpen, closeModal, nave}) => {
   const imgStarshipAct = UseEffectModal(nave);
-  console.log(nave);
+    console.log(nave);
   return (
     <article className={`modal ${isOpen && "is-open"}`}>
         <div className="modal-container">
